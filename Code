@@ -1,0 +1,90 @@
+def rank(z):
+    a=mark.values()
+    print(a)
+def total(mark,z):
+    b=0
+    a=mark[z].values()
+    for i in a:
+        b=i+b
+    print("Total mark",b)
+def grade(mark,z):
+    b=0
+    a=mark[z].values()
+    for i in a:
+        b=i+b
+    if(b<=500 and b>400):
+        print("grade 'A'")
+    elif(b<=400 and b>350):
+        print("grade'B'")
+    elif(b<=350 and b>300):
+        print("grade 'C'")
+    elif(b<=300 and b>250):
+        print("grade 'D'")
+    else:
+        print("grade 'E'")
+        
+def atend(attend,z):
+    a=attend[z]
+    print("your attendence percentage is ",a)
+            
+name={
+    101:'aravind',
+    102:'arun',
+    103:'gokul',
+    104:'mohan',
+    105:'vinith'
+    }
+attend={
+    101:79,
+    102:80,
+    103:67,
+    104:90,
+    105:95
+    }
+mark={
+    101:{
+        'tamil':69,
+        'english':89,
+        'maths':78,
+        'science':53,
+        'social':81
+        },
+    102:{
+        'tamil':50,
+        'english':59,
+        'maths':48,
+        'science':35,
+        'social':45
+        },
+    103:{
+        'tamil':35,
+        'english':40,
+        'maths':46,
+        'science':39,
+        'social':51
+        },
+    104:{
+        'tamil':90,
+        'english':91,
+        'maths':95,
+        'science':99,
+        'social':100
+        },
+    105:{
+        'tamil':93,
+        'english':98,
+        'maths':96,
+        'science':100,
+        'social':100
+        }
+}
+z=int(input("Enter your Roll number: "))
+print("WELCOME ",name[z])
+g=input("Do you want to see you mark or attendence: ")
+if (g=="mark"):
+    total(mark,z)
+    grade(mark,z)
+elif(g=="atend"):
+    atend(attend,z)
+else:
+    print("please entre the correct input")
